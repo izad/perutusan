@@ -13,7 +13,7 @@ class LoadingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        API(viewController: self).request("/categories",
+        API(viewController: self).request("categories",
                                           method: .GET,
                                           parameters: nil) { (response: APIResponse) in
                                             appDelegate.categories = response.categories

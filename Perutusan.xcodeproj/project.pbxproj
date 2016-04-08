@@ -21,6 +21,10 @@
 		91E335871CB76C1B00EB5E12 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335861CB76C1B00EB5E12 /* Category.swift */; };
 		91E335891CB76C8800EB5E12 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335881CB76C8800EB5E12 /* Article.swift */; };
 		91E3358B1CB76D2600EB5E12 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E3358A1CB76D2600EB5E12 /* LoadingViewController.swift */; };
+		91E3358D1CB7703400EB5E12 /* ArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E3358C1CB7703400EB5E12 /* ArticlesTableViewController.swift */; };
+		91E3358F1CB7707A00EB5E12 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E3358E1CB7707A00EB5E12 /* ArticleTableViewCell.swift */; };
+		91E335911CB784EE00EB5E12 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335901CB784EE00EB5E12 /* TitleView.swift */; };
+		91E335931CB7850000EB5E12 /* TitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91E335921CB7850000EB5E12 /* TitleView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,10 @@
 		91E335861CB76C1B00EB5E12 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		91E335881CB76C8800EB5E12 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		91E3358A1CB76D2600EB5E12 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		91E3358C1CB7703400EB5E12 /* ArticlesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewController.swift; sourceTree = "<group>"; };
+		91E3358E1CB7707A00EB5E12 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		91E335901CB784EE00EB5E12 /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		91E335921CB7850000EB5E12 /* TitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleView.xib; sourceTree = "<group>"; };
 		C55BB4D58EC616BEBB1FD820 /* Pods_Perutusan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Perutusan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -129,6 +137,9 @@
 			isa = PBXGroup;
 			children = (
 				91E335641CB7603B00EB5E12 /* Main.storyboard */,
+				91E3358E1CB7707A00EB5E12 /* ArticleTableViewCell.swift */,
+				91E335901CB784EE00EB5E12 /* TitleView.swift */,
+				91E335921CB7850000EB5E12 /* TitleView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -148,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				91E3358A1CB76D2600EB5E12 /* LoadingViewController.swift */,
+				91E3358C1CB7703400EB5E12 /* ArticlesTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -218,6 +230,7 @@
 				91E3356B1CB7603B00EB5E12 /* LaunchScreen.storyboard in Resources */,
 				91E335681CB7603B00EB5E12 /* Assets.xcassets in Resources */,
 				91E335661CB7603B00EB5E12 /* Main.storyboard in Resources */,
+				91E335931CB7850000EB5E12 /* TitleView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,11 +307,14 @@
 				91E335611CB7603B00EB5E12 /* AppDelegate.swift in Sources */,
 				91E335891CB76C8800EB5E12 /* Article.swift in Sources */,
 				91E335751CB762B700EB5E12 /* API.swift in Sources */,
+				91E3358F1CB7707A00EB5E12 /* ArticleTableViewCell.swift in Sources */,
 				91E335811CB7664C00EB5E12 /* UIAlertControllerExtension.swift in Sources */,
 				91E3357F1CB764F300EB5E12 /* Config.swift in Sources */,
+				91E3358D1CB7703400EB5E12 /* ArticlesTableViewController.swift in Sources */,
 				91E335831CB7688F00EB5E12 /* Metadata.swift in Sources */,
 				91E3358B1CB76D2600EB5E12 /* LoadingViewController.swift in Sources */,
 				91E335781CB7637700EB5E12 /* R.generated.swift in Sources */,
+				91E335911CB784EE00EB5E12 /* TitleView.swift in Sources */,
 				91E335871CB76C1B00EB5E12 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +437,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tech.izad.Perutusan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -435,6 +452,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tech.izad.Perutusan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

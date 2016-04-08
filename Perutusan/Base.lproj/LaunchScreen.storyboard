@@ -16,11 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="fTf-Ox-Jr0">
-                                <rect key="frame" x="110" y="234" width="100" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchLogo" translatesAutoresizingMaskIntoConstraints="NO" id="fTf-Ox-Jr0">
+                                <rect key="frame" x="60" y="234" width="200" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="afy-B5-fNf"/>
-                                    <constraint firstAttribute="width" constant="100" id="vtq-n5-TD1"/>
+                                    <constraint firstAttribute="width" constant="200" id="vtq-n5-TD1"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -38,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LaunchIcon" width="100" height="100"/>
+        <image name="LaunchLogo" width="200" height="100"/>
     </resources>
 </document>

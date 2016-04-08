@@ -35,10 +35,10 @@ class API {
     
     func handleResponseJSON(request request: Request, response: Response<AnyObject, NSError>, success: ()->()) {
         if response.result.error != nil {
-            print("handleError: \(response.result.error!)")
+            print(response.response!.statusCode)
             
             if let viewController = self.viewController {
-                UIAlertController.showAlertWithTitle("Error", message: "Internal server error", inViewController: viewController)
+                UIAlertController.showAlertWithTitle("Error", message: "Failed to fetch data from API (\(response.response!.statusCode))", inViewController: viewController)
             }
         }
         else {

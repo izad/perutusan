@@ -11,5 +11,7 @@ import EVReflection
 
 class APIResponse: EVObject {
     var metadata: Metadata!
-    var categories: [Category] = []    
+    var categories: [Category] = []
+    var articles: [Article] = []
+    var article: Article?
 }
