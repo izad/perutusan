@@ -12,9 +12,15 @@
 		91E335661CB7603B00EB5E12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E335641CB7603B00EB5E12 /* Main.storyboard */; };
 		91E335681CB7603B00EB5E12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91E335671CB7603B00EB5E12 /* Assets.xcassets */; };
 		91E3356B1CB7603B00EB5E12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E335691CB7603B00EB5E12 /* LaunchScreen.storyboard */; };
-		91E335731CB7625400EB5E12 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335721CB7625400EB5E12 /* LoadingViewController.swift */; };
 		91E335751CB762B700EB5E12 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335741CB762B700EB5E12 /* API.swift */; };
 		91E335781CB7637700EB5E12 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335771CB7637700EB5E12 /* R.generated.swift */; };
+		91E3357F1CB764F300EB5E12 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E3357E1CB764F300EB5E12 /* Config.swift */; };
+		91E335811CB7664C00EB5E12 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335801CB7664C00EB5E12 /* UIAlertControllerExtension.swift */; };
+		91E335831CB7688F00EB5E12 /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335821CB7688F00EB5E12 /* Metadata.swift */; };
+		91E335851CB76BF400EB5E12 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335841CB76BF400EB5E12 /* APIResponse.swift */; };
+		91E335871CB76C1B00EB5E12 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335861CB76C1B00EB5E12 /* Category.swift */; };
+		91E335891CB76C8800EB5E12 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335881CB76C8800EB5E12 /* Article.swift */; };
+		91E3358B1CB76D2600EB5E12 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E3358A1CB76D2600EB5E12 /* LoadingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,9 +32,15 @@
 		91E335671CB7603B00EB5E12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91E3356A1CB7603B00EB5E12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91E3356C1CB7603B00EB5E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		91E335721CB7625400EB5E12 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		91E335741CB762B700EB5E12 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		91E335771CB7637700EB5E12 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		91E3357E1CB764F300EB5E12 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		91E335801CB7664C00EB5E12 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
+		91E335821CB7688F00EB5E12 /* Metadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metadata.swift; sourceTree = "<group>"; };
+		91E335841CB76BF400EB5E12 /* APIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		91E335861CB76C1B00EB5E12 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		91E335881CB76C8800EB5E12 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		91E3358A1CB76D2600EB5E12 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		C55BB4D58EC616BEBB1FD820 /* Pods_Perutusan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Perutusan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -83,15 +95,61 @@
 			isa = PBXGroup;
 			children = (
 				91E335601CB7603B00EB5E12 /* AppDelegate.swift */,
-				91E335641CB7603B00EB5E12 /* Main.storyboard */,
-				91E335671CB7603B00EB5E12 /* Assets.xcassets */,
-				91E335721CB7625400EB5E12 /* LoadingViewController.swift */,
-				91E335691CB7603B00EB5E12 /* LaunchScreen.storyboard */,
-				91E3356C1CB7603B00EB5E12 /* Info.plist */,
-				91E335741CB762B700EB5E12 /* API.swift */,
-				91E335771CB7637700EB5E12 /* R.generated.swift */,
+				91E3357E1CB764F300EB5E12 /* Config.swift */,
+				91E335791CB7641200EB5E12 /* Helpers & Extensions */,
+				91E3357A1CB7641F00EB5E12 /* Models */,
+				91E3357D1CB7644500EB5E12 /* Controllers */,
+				91E3357B1CB7642300EB5E12 /* Views */,
+				91E3357C1CB7642C00EB5E12 /* Misc. */,
 			);
 			path = Perutusan;
+			sourceTree = "<group>";
+		};
+		91E335791CB7641200EB5E12 /* Helpers & Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				91E335741CB762B700EB5E12 /* API.swift */,
+				91E335801CB7664C00EB5E12 /* UIAlertControllerExtension.swift */,
+			);
+			name = "Helpers & Extensions";
+			sourceTree = "<group>";
+		};
+		91E3357A1CB7641F00EB5E12 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				91E335821CB7688F00EB5E12 /* Metadata.swift */,
+				91E335841CB76BF400EB5E12 /* APIResponse.swift */,
+				91E335861CB76C1B00EB5E12 /* Category.swift */,
+				91E335881CB76C8800EB5E12 /* Article.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		91E3357B1CB7642300EB5E12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				91E335641CB7603B00EB5E12 /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		91E3357C1CB7642C00EB5E12 /* Misc. */ = {
+			isa = PBXGroup;
+			children = (
+				91E335771CB7637700EB5E12 /* R.generated.swift */,
+				91E335671CB7603B00EB5E12 /* Assets.xcassets */,
+				91E3356C1CB7603B00EB5E12 /* Info.plist */,
+				91E335691CB7603B00EB5E12 /* LaunchScreen.storyboard */,
+			);
+			name = Misc.;
+			sourceTree = "<group>";
+		};
+		91E3357D1CB7644500EB5E12 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				91E3358A1CB76D2600EB5E12 /* LoadingViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,10 +290,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91E335851CB76BF400EB5E12 /* APIResponse.swift in Sources */,
 				91E335611CB7603B00EB5E12 /* AppDelegate.swift in Sources */,
+				91E335891CB76C8800EB5E12 /* Article.swift in Sources */,
 				91E335751CB762B700EB5E12 /* API.swift in Sources */,
-				91E335731CB7625400EB5E12 /* LoadingViewController.swift in Sources */,
+				91E335811CB7664C00EB5E12 /* UIAlertControllerExtension.swift in Sources */,
+				91E3357F1CB764F300EB5E12 /* Config.swift in Sources */,
+				91E335831CB7688F00EB5E12 /* Metadata.swift in Sources */,
+				91E3358B1CB76D2600EB5E12 /* LoadingViewController.swift in Sources */,
 				91E335781CB7637700EB5E12 /* R.generated.swift in Sources */,
+				91E335871CB76C1B00EB5E12 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

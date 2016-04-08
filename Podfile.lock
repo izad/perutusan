@@ -12,6 +12,7 @@ PODS:
   - R.swift.Library (2.0.0)
   - SnapKit (0.20.0)
   - SVProgressHUD (2.0.3)
+  - SwiftHEXColors (1.0.4)
 
 DEPENDENCIES:
   - Alamofire
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - R.swift
   - SnapKit
   - SVProgressHUD
+  - SwiftHEXColors
 
 SPEC CHECKSUMS:
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
@@ -32,5 +34,6 @@ SPEC CHECKSUMS:
   R.swift.Library: 9f4b2d12040daa1ffe336d8f7e1574f73721fd01
   SnapKit: 5fce3c1bbbf1fbd31de9aa92f33eb9fa03f15650
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  SwiftHEXColors: b0ecc7bd83a1aa2e1956f9ba51f55ebb2bcf86ef
 
 COCOAPODS: 0.39.0
