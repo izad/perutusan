@@ -20,6 +20,7 @@ class Article: EVObject {
     var lead: String?
     var body: String?
     var caption: String?
+    var color: UIColor!
     
     var loaded: Bool {
         get {

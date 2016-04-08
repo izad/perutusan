@@ -8,15 +8,21 @@
 
 import UIKit
 
-class ArticlesTableViewController: UITableViewController {
+class ArticlesTableViewController: UITableViewController, TitleViewDelegate {
     
     var articles: [Article] = []
     var titleView: TitleView!
+    var filter: Filter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        filter = Filter()
+        filter.category = appDelegate.categories.first!
+        filter.addObserver(self, forKeyPath: "category", options: .New, context: nil)
+        
         titleView = NSBundle.mainBundle().loadNibNamed("TitleView", owner: self, options: nil).first as! TitleView
+        titleView.configure(filter: filter, delegate: self)
         navigationItem.titleView = titleView
 
         refreshControl = UIRefreshControl()
@@ -25,9 +31,15 @@ class ArticlesTableViewController: UITableViewController {
         tableView.tableFooterView = UIView()
         tableView.addSubview(refreshControl!)        
         
-        refreshControl!.beginRefreshing()
-        tableView.setContentOffset(CGPointMake(0, -refreshControl!.frame.size.height), animated: true)
-        fetchArticles()
+        prepareToFetchArticles()
+    }
+    
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        prepareToFetchArticles()
+    }
+    
+    deinit {
+        filter.removeObserver(self, forKeyPath: "profilePhotoFullResolution")
     }
 
   
@@ -61,14 +73,43 @@ class ArticlesTableViewController: UITableViewController {
     }
     
     
+    // MARK: - Title view delegate
+    
+    func titleView(titleView: TitleView, didTapButton button: UIButton) {
+        performSegueWithIdentifier(R.segue.articlesTableViewController.showCategories.identifier, sender: nil)
+    }
+    
+    
     // MARK: - Misc.
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        switch segue.identifier! {
+            case R.segue.articlesTableViewController.showCategories.identifier:
+                let categoriesVC = segue.destinationViewController as! CategoriesViewController
+                categoriesVC.filter = filter
+            
+            default:
+                break
+        }
+    }
+    
+    func prepareToFetchArticles() {
+        refreshControl!.beginRefreshing()
+        tableView.setContentOffset(CGPointMake(0, -refreshControl!.frame.size.height), animated: true)
+        fetchArticles()
+    }
     
     func fetchArticles() {
         API(viewController: self)
-            .request("categories\(appDelegate.categories.first!.path)",
+            .request("categories\(filter.category.path)",
                      method: .GET,
                      parameters: nil) { (response: APIResponse) in
                         self.articles = response.articles
+                        
+                        for article in self.articles {
+                            article.color = UIColor.randomColor()
+                        }
+                        
                         self.tableView.reloadData()
                         self.refreshControl!.endRefreshing()
                      }

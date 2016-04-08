@@ -25,6 +25,11 @@
 		91E3358F1CB7707A00EB5E12 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E3358E1CB7707A00EB5E12 /* ArticleTableViewCell.swift */; };
 		91E335911CB784EE00EB5E12 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335901CB784EE00EB5E12 /* TitleView.swift */; };
 		91E335931CB7850000EB5E12 /* TitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91E335921CB7850000EB5E12 /* TitleView.xib */; };
+		91E335971CB7946C00EB5E12 /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E335961CB7946C00EB5E12 /* UIColor+Random.m */; };
+		91E335991CB7978A00EB5E12 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335981CB7978A00EB5E12 /* Filter.swift */; };
+		91E3359C1CB798BB00EB5E12 /* TitleViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E3359B1CB798BB00EB5E12 /* TitleViewDelegate.swift */; };
+		91E335A41CB7A6E900EB5E12 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335A31CB7A6E900EB5E12 /* CategoriesViewController.swift */; };
+		91E335A61CB7A8BC00EB5E12 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335A51CB7A8BC00EB5E12 /* CategoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +54,13 @@
 		91E3358E1CB7707A00EB5E12 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		91E335901CB784EE00EB5E12 /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		91E335921CB7850000EB5E12 /* TitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleView.xib; sourceTree = "<group>"; };
+		91E335941CB7946B00EB5E12 /* Perutusan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Perutusan-Bridging-Header.h"; sourceTree = "<group>"; };
+		91E335951CB7946C00EB5E12 /* UIColor+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Random.h"; sourceTree = "<group>"; };
+		91E335961CB7946C00EB5E12 /* UIColor+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Random.m"; sourceTree = "<group>"; };
+		91E335981CB7978A00EB5E12 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		91E3359B1CB798BB00EB5E12 /* TitleViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleViewDelegate.swift; sourceTree = "<group>"; };
+		91E335A31CB7A6E900EB5E12 /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		91E335A51CB7A8BC00EB5E12 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		C55BB4D58EC616BEBB1FD820 /* Pods_Perutusan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Perutusan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -104,6 +116,7 @@
 			children = (
 				91E335601CB7603B00EB5E12 /* AppDelegate.swift */,
 				91E3357E1CB764F300EB5E12 /* Config.swift */,
+				91E335941CB7946B00EB5E12 /* Perutusan-Bridging-Header.h */,
 				91E335791CB7641200EB5E12 /* Helpers & Extensions */,
 				91E3357A1CB7641F00EB5E12 /* Models */,
 				91E3357D1CB7644500EB5E12 /* Controllers */,
@@ -118,6 +131,8 @@
 			children = (
 				91E335741CB762B700EB5E12 /* API.swift */,
 				91E335801CB7664C00EB5E12 /* UIAlertControllerExtension.swift */,
+				91E335951CB7946C00EB5E12 /* UIColor+Random.h */,
+				91E335961CB7946C00EB5E12 /* UIColor+Random.m */,
 			);
 			name = "Helpers & Extensions";
 			sourceTree = "<group>";
@@ -129,6 +144,7 @@
 				91E335841CB76BF400EB5E12 /* APIResponse.swift */,
 				91E335861CB76C1B00EB5E12 /* Category.swift */,
 				91E335881CB76C8800EB5E12 /* Article.swift */,
+				91E335981CB7978A00EB5E12 /* Filter.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -140,6 +156,8 @@
 				91E3358E1CB7707A00EB5E12 /* ArticleTableViewCell.swift */,
 				91E335901CB784EE00EB5E12 /* TitleView.swift */,
 				91E335921CB7850000EB5E12 /* TitleView.xib */,
+				91E3359B1CB798BB00EB5E12 /* TitleViewDelegate.swift */,
+				91E335A51CB7A8BC00EB5E12 /* CategoryTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -160,6 +178,7 @@
 			children = (
 				91E3358A1CB76D2600EB5E12 /* LoadingViewController.swift */,
 				91E3358C1CB7703400EB5E12 /* ArticlesTableViewController.swift */,
+				91E335A31CB7A6E900EB5E12 /* CategoriesViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -303,19 +322,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91E335971CB7946C00EB5E12 /* UIColor+Random.m in Sources */,
+				91E335991CB7978A00EB5E12 /* Filter.swift in Sources */,
 				91E335851CB76BF400EB5E12 /* APIResponse.swift in Sources */,
 				91E335611CB7603B00EB5E12 /* AppDelegate.swift in Sources */,
 				91E335891CB76C8800EB5E12 /* Article.swift in Sources */,
+				91E335A41CB7A6E900EB5E12 /* CategoriesViewController.swift in Sources */,
 				91E335751CB762B700EB5E12 /* API.swift in Sources */,
 				91E3358F1CB7707A00EB5E12 /* ArticleTableViewCell.swift in Sources */,
 				91E335811CB7664C00EB5E12 /* UIAlertControllerExtension.swift in Sources */,
 				91E3357F1CB764F300EB5E12 /* Config.swift in Sources */,
 				91E3358D1CB7703400EB5E12 /* ArticlesTableViewController.swift in Sources */,
+				91E3359C1CB798BB00EB5E12 /* TitleViewDelegate.swift in Sources */,
 				91E335831CB7688F00EB5E12 /* Metadata.swift in Sources */,
 				91E3358B1CB76D2600EB5E12 /* LoadingViewController.swift in Sources */,
 				91E335781CB7637700EB5E12 /* R.generated.swift in Sources */,
 				91E335911CB784EE00EB5E12 /* TitleView.swift in Sources */,
 				91E335871CB76C1B00EB5E12 /* Category.swift in Sources */,
+				91E335A61CB7A8BC00EB5E12 /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,12 +455,15 @@
 			baseConfigurationReference = 48AD0B7726219F1672DAC7CC /* Pods-Perutusan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Perutusan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tech.izad.Perutusan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Perutusan/Perutusan-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -446,12 +473,14 @@
 			baseConfigurationReference = 84621748DCB62BF5CDC376FC /* Pods-Perutusan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Perutusan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tech.izad.Perutusan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Perutusan/Perutusan-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
