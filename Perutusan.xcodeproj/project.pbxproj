@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D5BEED6AE2CDE01A85D9259 /* Pods_Perutusan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55BB4D58EC616BEBB1FD820 /* Pods_Perutusan.framework */; };
 		91E335611CB7603B00EB5E12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335601CB7603B00EB5E12 /* AppDelegate.swift */; };
-		91E335631CB7603B00EB5E12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335621CB7603B00EB5E12 /* ViewController.swift */; };
 		91E335661CB7603B00EB5E12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E335641CB7603B00EB5E12 /* Main.storyboard */; };
 		91E335681CB7603B00EB5E12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91E335671CB7603B00EB5E12 /* Assets.xcassets */; };
 		91E3356B1CB7603B00EB5E12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E335691CB7603B00EB5E12 /* LaunchScreen.storyboard */; };
+		91E335731CB7625400EB5E12 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335721CB7625400EB5E12 /* LoadingViewController.swift */; };
+		91E335751CB762B700EB5E12 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335741CB762B700EB5E12 /* API.swift */; };
+		91E335781CB7637700EB5E12 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335771CB7637700EB5E12 /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48AD0B7726219F1672DAC7CC /* Pods-Perutusan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perutusan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Perutusan/Pods-Perutusan.debug.xcconfig"; sourceTree = "<group>"; };
+		84621748DCB62BF5CDC376FC /* Pods-Perutusan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perutusan.release.xcconfig"; path = "Pods/Target Support Files/Pods-Perutusan/Pods-Perutusan.release.xcconfig"; sourceTree = "<group>"; };
 		91E3355D1CB7603B00EB5E12 /* Perutusan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Perutusan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E335601CB7603B00EB5E12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		91E335621CB7603B00EB5E12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		91E335651CB7603B00EB5E12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91E335671CB7603B00EB5E12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91E3356A1CB7603B00EB5E12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91E3356C1CB7603B00EB5E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91E335721CB7625400EB5E12 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		91E335741CB762B700EB5E12 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		91E335771CB7637700EB5E12 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		C55BB4D58EC616BEBB1FD820 /* Pods_Perutusan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Perutusan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D5BEED6AE2CDE01A85D9259 /* Pods_Perutusan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09D22D0EE88F88BA05BABEB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C55BB4D58EC616BEBB1FD820 /* Pods_Perutusan.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50DB522E5D0CC4BC8E09FDE7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48AD0B7726219F1672DAC7CC /* Pods-Perutusan.debug.xcconfig */,
+				84621748DCB62BF5CDC376FC /* Pods-Perutusan.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		91E335541CB7603B00EB5E12 = {
 			isa = PBXGroup;
 			children = (
 				91E3355F1CB7603B00EB5E12 /* Perutusan */,
 				91E3355E1CB7603B00EB5E12 /* Products */,
+				50DB522E5D0CC4BC8E09FDE7 /* Pods */,
+				09D22D0EE88F88BA05BABEB0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,11 +83,13 @@
 			isa = PBXGroup;
 			children = (
 				91E335601CB7603B00EB5E12 /* AppDelegate.swift */,
-				91E335621CB7603B00EB5E12 /* ViewController.swift */,
 				91E335641CB7603B00EB5E12 /* Main.storyboard */,
 				91E335671CB7603B00EB5E12 /* Assets.xcassets */,
+				91E335721CB7625400EB5E12 /* LoadingViewController.swift */,
 				91E335691CB7603B00EB5E12 /* LaunchScreen.storyboard */,
 				91E3356C1CB7603B00EB5E12 /* Info.plist */,
+				91E335741CB762B700EB5E12 /* API.swift */,
+				91E335771CB7637700EB5E12 /* R.generated.swift */,
 			);
 			path = Perutusan;
 			sourceTree = "<group>";
@@ -71,9 +101,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91E3356F1CB7603B00EB5E12 /* Build configuration list for PBXNativeTarget "Perutusan" */;
 			buildPhases = (
+				7C4B5BF56A5C1DED163F25F9 /* Check Pods Manifest.lock */,
+				91E335761CB7634900EB5E12 /* R.swift */,
 				91E335591CB7603B00EB5E12 /* Sources */,
 				91E3355A1CB7603B00EB5E12 /* Frameworks */,
 				91E3355B1CB7603B00EB5E12 /* Resources */,
+				3DAC13C9A1039D386AA1CA90 /* Embed Pods Frameworks */,
+				43E9E95DB2656D83EAE9C7C5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +130,7 @@
 				TargetAttributes = {
 					91E3355C1CB7603B00EB5E12 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = G6933L7M22;
 					};
 				};
 			};
@@ -130,13 +165,77 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3DAC13C9A1039D386AA1CA90 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Perutusan/Pods-Perutusan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43E9E95DB2656D83EAE9C7C5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Perutusan/Pods-Perutusan-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C4B5BF56A5C1DED163F25F9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		91E335761CB7634900EB5E12 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		91E335591CB7603B00EB5E12 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91E335631CB7603B00EB5E12 /* ViewController.swift in Sources */,
 				91E335611CB7603B00EB5E12 /* AppDelegate.swift in Sources */,
+				91E335751CB762B700EB5E12 /* API.swift in Sources */,
+				91E335731CB7625400EB5E12 /* LoadingViewController.swift in Sources */,
+				91E335781CB7637700EB5E12 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +348,12 @@
 		};
 		91E335701CB7603B00EB5E12 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48AD0B7726219F1672DAC7CC /* Pods-Perutusan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Perutusan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tech.izad.Perutusan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -260,9 +362,12 @@
 		};
 		91E335711CB7603B00EB5E12 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84621748DCB62BF5CDC376FC /* Pods-Perutusan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Perutusan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tech.izad.Perutusan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -288,6 +393,7 @@
 				91E335711CB7603B00EB5E12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
