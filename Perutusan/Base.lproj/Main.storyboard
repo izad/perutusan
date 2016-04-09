@@ -248,6 +248,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="czt-Dn-qWX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="W1C-qB-ttj" kind="relationship" relationship="rootViewController" id="ajS-zg-CX0"/>
@@ -259,6 +260,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LaunchLogo" width="200" height="100"/>
+        <image name="LaunchLogo" width="400" height="200"/>
     </resources>
 </document>

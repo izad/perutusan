@@ -20,7 +20,7 @@ class ArticlesTableViewController: UITableViewController, TitleViewDelegate {
         filter = Filter()
         filter.category = appDelegate.categories.first!
         filter.addObserver(self, forKeyPath: "category", options: .New, context: nil)
-        title = filter.category.name
+        title = filter.category.name.uppercaseString
         
         titleView = NSBundle.mainBundle().loadNibNamed("TitleView", owner: self, options: nil).first as! TitleView
         titleView.configure(filter: filter, delegate: self)
@@ -36,7 +36,7 @@ class ArticlesTableViewController: UITableViewController, TitleViewDelegate {
     }
     
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
-        title = filter.category.name
+        title = filter.category.name.uppercaseString
         prepareToFetchArticles()
     }
     
