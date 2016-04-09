@@ -206,7 +206,6 @@
         <!--Article Details Table View Controller-->
         <scene sceneID="pO1-qb-hrW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iFK-aV-jd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="yEO-ND-hTt" customClass="ArticleDetailsTableViewController" customModule="Perutusan" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="207" sectionHeaderHeight="28" sectionFooterHeight="28" id="DKL-1v-2Jj">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
@@ -227,10 +226,13 @@
                             <outlet property="delegate" destination="yEO-ND-hTt" id="CcH-Oj-dfR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="IGw-He-UCT"/>
+                    <navigationItem key="navigationItem" id="IGw-He-UCT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="rxi-Lp-8pF"/>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iFK-aV-jd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1252" y="967"/>
         </scene>

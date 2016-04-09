@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import AlamofireImage
 
 class ArticleDetailsTableViewCell: UITableViewCell {
     
@@ -16,6 +17,10 @@ class ArticleDetailsTableViewCell: UITableViewCell {
     }
 
     func configure(article article: Article) {
+        for subview in contentView.subviews {
+            subview.removeFromSuperview()
+        }
+        
         let darkTextColor = UIColor(hexString: "#333333")
         let lightTextColor = UIColor(hexString: "#999999")
         
@@ -42,7 +47,6 @@ class ArticleDetailsTableViewCell: UITableViewCell {
             make.height.equalTo(16)
             make.leading.equalTo(titleLabel)
             make.top.equalTo(titleLabel.snp_bottom).offset(4)
-            make.bottom.equalTo(contentView).offset(-15)
         }
         
         
@@ -55,6 +59,110 @@ class ArticleDetailsTableViewCell: UITableViewCell {
         timestampLabel.snp_makeConstraints { (make) -> Void in
             make.centerY.equalTo(timestampImageView)
             make.leading.equalTo(timestampImageView.snp_trailing).offset(8)
+        }
+        
+        
+        let topGuideView = UIView()
+        contentView.addSubview(topGuideView)
+        
+        if article.loaded {            
+            topGuideView.snp_makeConstraints { (make) in
+                make.left.equalTo(contentView)
+                make.top.equalTo(timestampImageView.snp_bottom)
+                make.right.equalTo(contentView)
+                make.height.equalTo(1)
+            }
+            
+            if let photoURL = article.photoURL {
+                let photoImageView = UIImageView()
+                photoImageView.af_setImageWithURL(photoURL)
+                photoImageView.contentMode = .ScaleAspectFill
+                photoImageView.clipsToBounds = true
+                photoImageView.backgroundColor = UIColor.groupTableViewBackgroundColor()
+ 
+                //let photoImageView = UIView()
+                //photoImageView.backgroundColor = UIColor.groupTableViewBackgroundColor()
+                contentView.addSubview(photoImageView)
+                
+                photoImageView.snp_makeConstraints(closure: { (make) in
+                    //make.height.equalTo(44)
+                    make.top.equalTo(topGuideView.snp_bottom).offset(15)
+                    make.left.equalTo(contentView)
+                    make.right.equalTo(contentView)
+                })
+                
+                if let caption = article.caption {
+                    let captionLabel = UILabel()
+                    captionLabel.text = caption
+                    captionLabel.numberOfLines = 0
+                    captionLabel.textColor = lightTextColor
+                    captionLabel.font = UIFont.systemFontOfSize(12)
+                    contentView.addSubview(captionLabel)
+                    
+                    captionLabel.snp_makeConstraints(closure: { (make) in
+                        make.left.equalTo(contentView).offset(15)
+                        make.right.equalTo(contentView).offset(-15)
+                        make.top.equalTo(photoImageView.snp_bottom).offset(8)
+                    })
+                }
+            }
+            
+            if let lead = article.lead {
+                let leadLabel = UILabel()
+                leadLabel.text = lead
+                leadLabel.numberOfLines = 0
+                leadLabel.textColor = darkTextColor
+                leadLabel.font = UIFont.systemFontOfSize(14)
+                contentView.addSubview(leadLabel)
+                
+                leadLabel.snp_makeConstraints { (make) -> Void in
+                    make.top.equalTo(contentView.previousSubview.snp_bottom).offset(15)
+                    make.left.equalTo(contentView).offset(15)
+                    make.right.equalTo(contentView).offset(-15)
+                }
+            }
+            
+            if let body = article.body {
+                let bodyLabel = UILabel()
+                
+                if let author = article.author {
+                    bodyLabel.text = "\(body)Author: \(author)\n\n"
+                }
+                else {
+                    bodyLabel.text = body
+                }
+                
+                bodyLabel.numberOfLines = 0
+                bodyLabel.textColor = darkTextColor
+                bodyLabel.font = UIFont.systemFontOfSize(14)
+                contentView.addSubview(bodyLabel)
+                
+                bodyLabel.snp_makeConstraints { (make) -> Void in
+                    make.top.equalTo(contentView.previousSubview.snp_bottom).offset(15)
+                    make.left.equalTo(contentView).offset(15)
+                    make.right.equalTo(contentView).offset(-15)
+                }
+            }
+            
+            let bottomGuideView = UIView()
+            contentView.addSubview(bottomGuideView)
+            
+            bottomGuideView.snp_makeConstraints { (make) in
+                make.left.equalTo(contentView)
+                make.top.equalTo(contentView.previousSubview.snp_bottom)
+                make.right.equalTo(contentView)
+                make.height.equalTo(1)
+                make.bottom.equalTo(contentView)
+            }
+        }
+        else {
+            topGuideView.snp_makeConstraints { (make) in
+                make.left.equalTo(contentView)
+                make.top.equalTo(timestampImageView.snp_bottom)
+                make.right.equalTo(contentView)
+                make.height.equalTo(1)
+                make.bottom.equalTo(contentView)
+            }
         }
     }
 

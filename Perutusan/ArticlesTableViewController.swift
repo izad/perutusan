@@ -59,19 +59,11 @@ class ArticlesTableViewController: UITableViewController, TitleViewDelegate {
         let cell = tableView.dequeueReusableCellWithIdentifier(R.reuseIdentifier.article, forIndexPath: indexPath)!
         cell.configure(article: articles[indexPath.row])
         
-        // [[UIDevice currentDevice] orientation]
-        
         return cell
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        var navBarHeight = navigationController!.navigationBar.frame.size.height
-        
-        if UIApplication.sharedApplication().statusBarHidden == false {
-            navBarHeight += 20
-        }
-        
-        return (UIScreen.mainScreen().bounds.height - navBarHeight) / 3
+        return (UIScreen.mainScreen().bounds.height - 64) / 3
     }
     
     

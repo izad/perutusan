@@ -12,6 +12,7 @@ import EVReflection
 class Article: EVObject {
     
     var id: String!
+    var link: String!
     var title: String!
     var photo: String?
     var timestamp: String!

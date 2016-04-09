@@ -33,6 +33,7 @@
 		91E3359C1CB798BB00EB5E12 /* TitleViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E3359B1CB798BB00EB5E12 /* TitleViewDelegate.swift */; };
 		91E335A41CB7A6E900EB5E12 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335A31CB7A6E900EB5E12 /* CategoriesViewController.swift */; };
 		91E335A61CB7A8BC00EB5E12 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335A51CB7A8BC00EB5E12 /* CategoryTableViewCell.swift */; };
+		91E6C4E21CB8C8BC001E05A5 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E6C4E11CB8C8BC001E05A5 /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		91E3359B1CB798BB00EB5E12 /* TitleViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleViewDelegate.swift; sourceTree = "<group>"; };
 		91E335A31CB7A6E900EB5E12 /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		91E335A51CB7A8BC00EB5E12 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		91E6C4E11CB8C8BC001E05A5 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		C55BB4D58EC616BEBB1FD820 /* Pods_Perutusan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Perutusan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,7 @@
 				91E335951CB7946C00EB5E12 /* UIColor+Random.h */,
 				91E335961CB7946C00EB5E12 /* UIColor+Random.m */,
 				91191DA01CB8BBE6005F1DD4 /* UITableViewExtension.swift */,
+				91E6C4E11CB8C8BC001E05A5 /* UIViewExtension.swift */,
 			);
 			name = "Helpers & Extensions";
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 			files = (
 				91E335971CB7946C00EB5E12 /* UIColor+Random.m in Sources */,
 				91E335991CB7978A00EB5E12 /* Filter.swift in Sources */,
+				91E6C4E21CB8C8BC001E05A5 /* UIViewExtension.swift in Sources */,
 				91E335851CB76BF400EB5E12 /* APIResponse.swift in Sources */,
 				91E335611CB7603B00EB5E12 /* AppDelegate.swift in Sources */,
 				91E335891CB76C8800EB5E12 /* Article.swift in Sources */,
