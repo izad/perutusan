@@ -29,6 +29,12 @@ class Article: EVObject {
         }
     }
     
+    var linkURL: NSURL {
+        get {
+            return NSURL(string: link)!
+        }
+    }
+    
     var photoURL: NSURL? {
         get {
             guard let photo = photo else {

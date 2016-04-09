@@ -19,14 +19,16 @@ class ArticleDetailsTableViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
         
-        tableView.addSubview(activityIndicatorView)
-        activityIndicatorView.startAnimating()
-        
-        activityIndicatorView.snp_makeConstraints { (make) in
-            make.center.equalTo(tableView)
+        if article.loaded == false {
+            tableView.addSubview(activityIndicatorView)
+            activityIndicatorView.startAnimating()
+            
+            activityIndicatorView.snp_makeConstraints { (make) in
+                make.center.equalTo(tableView)
+            }
+            
+            fetchArticle()
         }
-        
-        fetchArticle()
     }
     
 
@@ -50,6 +52,39 @@ class ArticleDetailsTableViewController: UITableViewController {
     
     // MARK: - Misc.
     
+    @IBAction func shareButtonTapped(sender: UIBarButtonItem) {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        
+        alertController.addAction(UIAlertAction(
+            title: "Open in Safari",
+            style: .Default,
+            handler: { (action) in
+                UIApplication.sharedApplication().openURL(self.article.linkURL)                
+            }
+        ))
+        
+        alertController.addAction(UIAlertAction(
+            title: "Share link",
+            style: .Default,
+            handler: { (action) in
+                let activityVC = UIActivityViewController(
+                    activityItems: [self.article.link],
+                    applicationActivities: nil
+                )
+                
+                self.presentViewController(activityVC, animated: true, completion: nil)
+            }
+        ))
+        
+        alertController.addAction(UIAlertAction(
+            title: "Cancel",
+            style: .Cancel,
+            handler: nil
+        ))
+        
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+    
     func fetchArticle() {
         API(viewController: self)
             .request("articles/\(article.id)",
@@ -61,5 +96,7 @@ class ArticleDetailsTableViewController: UITableViewController {
                         self.tableView.reloadData()
                     })
     }
+    
+    
 
 }

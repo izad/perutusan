@@ -227,7 +227,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="IGw-He-UCT">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="rxi-Lp-8pF"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="rxi-Lp-8pF">
+                            <connections>
+                                <action selector="shareButtonTapped:" destination="yEO-ND-hTt" id="p9X-nD-oqA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
