@@ -107,9 +107,8 @@ class ArticlesTableViewController: UITableViewController, TitleViewDelegate {
         }
     }
     
-    func prepareToFetchArticles() {
-        refreshControl!.beginRefreshing()
-        tableView.setContentOffset(CGPointMake(0, -refreshControl!.frame.size.height), animated: true)
+    func prepareToFetchArticles() {        
+        tableView.showRefreshControl(refreshControl!)        
         fetchArticles()
     }
     

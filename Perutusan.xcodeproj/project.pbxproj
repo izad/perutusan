@@ -10,6 +10,7 @@
 		3D5BEED6AE2CDE01A85D9259 /* Pods_Perutusan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55BB4D58EC616BEBB1FD820 /* Pods_Perutusan.framework */; };
 		91191D9D1CB8AA80005F1DD4 /* ArticleDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91191D9C1CB8AA80005F1DD4 /* ArticleDetailsTableViewController.swift */; };
 		91191D9F1CB8ACFD005F1DD4 /* ArticleDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91191D9E1CB8ACFD005F1DD4 /* ArticleDetailsTableViewCell.swift */; };
+		91191DA11CB8BBE6005F1DD4 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91191DA01CB8BBE6005F1DD4 /* UITableViewExtension.swift */; };
 		91E335611CB7603B00EB5E12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335601CB7603B00EB5E12 /* AppDelegate.swift */; };
 		91E335661CB7603B00EB5E12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E335641CB7603B00EB5E12 /* Main.storyboard */; };
 		91E335681CB7603B00EB5E12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91E335671CB7603B00EB5E12 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		84621748DCB62BF5CDC376FC /* Pods-Perutusan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perutusan.release.xcconfig"; path = "Pods/Target Support Files/Pods-Perutusan/Pods-Perutusan.release.xcconfig"; sourceTree = "<group>"; };
 		91191D9C1CB8AA80005F1DD4 /* ArticleDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailsTableViewController.swift; sourceTree = "<group>"; };
 		91191D9E1CB8ACFD005F1DD4 /* ArticleDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		91191DA01CB8BBE6005F1DD4 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		91E3355D1CB7603B00EB5E12 /* Perutusan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Perutusan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E335601CB7603B00EB5E12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91E335651CB7603B00EB5E12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				91E335801CB7664C00EB5E12 /* UIAlertControllerExtension.swift */,
 				91E335951CB7946C00EB5E12 /* UIColor+Random.h */,
 				91E335961CB7946C00EB5E12 /* UIColor+Random.m */,
+				91191DA01CB8BBE6005F1DD4 /* UITableViewExtension.swift */,
 			);
 			name = "Helpers & Extensions";
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				91E335611CB7603B00EB5E12 /* AppDelegate.swift in Sources */,
 				91E335891CB76C8800EB5E12 /* Article.swift in Sources */,
 				91E335A41CB7A6E900EB5E12 /* CategoriesViewController.swift in Sources */,
+				91191DA11CB8BBE6005F1DD4 /* UITableViewExtension.swift in Sources */,
 				91E335751CB762B700EB5E12 /* API.swift in Sources */,
 				91191D9F1CB8ACFD005F1DD4 /* ArticleDetailsTableViewCell.swift in Sources */,
 				91E3358F1CB7707A00EB5E12 /* ArticleTableViewCell.swift in Sources */,
