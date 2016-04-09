@@ -78,10 +78,7 @@ class ArticleDetailsTableViewCell: UITableViewCell {
                 photoImageView.af_setImageWithURL(photoURL)
                 photoImageView.contentMode = .ScaleAspectFill
                 photoImageView.clipsToBounds = true
-                photoImageView.backgroundColor = UIColor.groupTableViewBackgroundColor()
- 
-                //let photoImageView = UIView()
-                //photoImageView.backgroundColor = UIColor.groupTableViewBackgroundColor()
+                photoImageView.backgroundColor = UIColor.groupTableViewBackgroundColor()                 
                 contentView.addSubview(photoImageView)
                 
                 photoImageView.snp_makeConstraints(closure: { (make) in
