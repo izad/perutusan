@@ -20,6 +20,7 @@ class ArticlesTableViewController: UITableViewController, TitleViewDelegate {
         filter = Filter()
         filter.category = appDelegate.categories.first!
         filter.addObserver(self, forKeyPath: "category", options: .New, context: nil)
+        title = filter.category.name
         
         titleView = NSBundle.mainBundle().loadNibNamed("TitleView", owner: self, options: nil).first as! TitleView
         titleView.configure(filter: filter, delegate: self)
@@ -35,6 +36,7 @@ class ArticlesTableViewController: UITableViewController, TitleViewDelegate {
     }
     
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        title = filter.category.name
         prepareToFetchArticles()
     }
     
@@ -73,6 +75,13 @@ class ArticlesTableViewController: UITableViewController, TitleViewDelegate {
     }
     
     
+    // MARK: - Table view delegate
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier(R.segue.articlesTableViewController.showArticleDetails, sender: indexPath)
+    }
+    
+    
     // MARK: - Title view delegate
     
     func titleView(titleView: TitleView, didTapButton button: UIButton) {
@@ -87,6 +96,11 @@ class ArticlesTableViewController: UITableViewController, TitleViewDelegate {
             case R.segue.articlesTableViewController.showCategories.identifier:
                 let categoriesVC = segue.destinationViewController as! CategoriesViewController
                 categoriesVC.filter = filter
+            
+            case R.segue.articlesTableViewController.showArticleDetails.identifier:
+                let indexPath = sender as! NSIndexPath
+                let articleDetailsTVC = segue.destinationViewController as! ArticleDetailsTableViewController
+                articleDetailsTVC.article = articles[indexPath.row]
             
             default:
                 break

@@ -11,5 +11,5 @@ import UIKit
 import SwiftHEXColors
 
 let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-let kBaseAPIURL = "https://utusan.herokuapp.com"
+let kBaseAPIURL = "https://perutusan-api.herokuapp.com"
 let kTintColor = UIColor(hexString: "#1CBFE8")

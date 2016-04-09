@@ -22,7 +22,7 @@ class ArticleTableViewCell: UITableViewCell {
     func configure(article article: Article) {
         backgroundColor = article.color
         titleLabel.text = article.title
-        timestampLabel.text = article.timestamp
+        timestampLabel.text = article.timestamp.uppercaseString
         photoImageView.image = nil
         
         if let photoURL = article.photoURL {
