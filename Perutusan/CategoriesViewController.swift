@@ -30,11 +30,18 @@ class CategoriesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
         view.layoutIfNeeded()
         
         UIView.animateWithDuration(0.25, animations: {
-            self.tableViewHeightConstraint.constant = 44 * 6
+            let height = CGFloat(appDelegate.categories.count) * 44
+            
+            if UIScreen.mainScreen().bounds.height > height + 64 {
+                self.tableViewHeightConstraint.constant = height
+            }
+            else {
+                self.tableViewHeightConstraint.constant = 44 * 6
+            }
+            
             self.view.layoutIfNeeded()
         })
     }
