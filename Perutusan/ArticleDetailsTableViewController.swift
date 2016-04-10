@@ -11,7 +11,7 @@ import UIKit
 class ArticleDetailsTableViewController: UITableViewController {
     
     var article: Article!
-    var activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+    var activityIndicatorView: ActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,13 +20,8 @@ class ArticleDetailsTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 100
         
         if article.loaded == false {
-            tableView.addSubview(activityIndicatorView)
-            activityIndicatorView.startAnimating()
-            
-            activityIndicatorView.snp_makeConstraints { (make) in
-                make.center.equalTo(tableView)
-            }
-            
+            activityIndicatorView = ActivityIndicatorView(superview: tableView)
+            activityIndicatorView.startAnimation()
             fetchArticle()
         }
     }
@@ -91,7 +86,7 @@ class ArticleDetailsTableViewController: UITableViewController {
                      method: .GET,
                      parameters: nil,
                      completion: { (response: APIResponse) in
-                        self.activityIndicatorView.removeFromSuperview()
+                        self.activityIndicatorView.stopAnimation()
                         self.article.combineWith(response.article!)
                         self.tableView.reloadData()
                     })

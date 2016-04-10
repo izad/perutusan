@@ -13,7 +13,8 @@ class ArticlesTableViewController: UITableViewController, TitleViewDelegate {
     var articles: [Article] = []
     var titleView: TitleView!
     var filter: Filter!
-
+    var activityIndicatorView: ActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,8 +31,9 @@ class ArticlesTableViewController: UITableViewController, TitleViewDelegate {
         refreshControl!.addTarget(self, action: #selector(fetchArticles), forControlEvents: .ValueChanged)
         
         tableView.tableFooterView = UIView()
-        tableView.addSubview(refreshControl!)        
+        tableView.addSubview(refreshControl!)
         
+        activityIndicatorView = ActivityIndicatorView(superview: tableView)
         prepareToFetchArticles()
     }
     
@@ -99,8 +101,11 @@ class ArticlesTableViewController: UITableViewController, TitleViewDelegate {
         }
     }
     
-    func prepareToFetchArticles() {        
-        tableView.showRefreshControl(refreshControl!)        
+    func prepareToFetchArticles() {
+        articles.removeAll()
+        tableView.reloadData()
+        activityIndicatorView.startAnimation()
+        
         fetchArticles()
     }
     
@@ -116,6 +121,7 @@ class ArticlesTableViewController: UITableViewController, TitleViewDelegate {
                         }
                         
                         self.tableView.reloadData()
+                        self.activityIndicatorView.stopAnimation()
                         self.refreshControl!.endRefreshing()
                      }
     }
