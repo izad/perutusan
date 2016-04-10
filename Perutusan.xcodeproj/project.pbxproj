@@ -11,6 +11,7 @@
 		91191D9D1CB8AA80005F1DD4 /* ArticleDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91191D9C1CB8AA80005F1DD4 /* ArticleDetailsTableViewController.swift */; };
 		91191D9F1CB8ACFD005F1DD4 /* ArticleDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91191D9E1CB8ACFD005F1DD4 /* ArticleDetailsTableViewCell.swift */; };
 		9155372B1CBA034300145186 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9155372A1CBA034300145186 /* ActivityIndicatorView.swift */; };
+		9155372D1CBA0E6100145186 /* ArticleDetailsTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9155372C1CBA0E6100145186 /* ArticleDetailsTableViewCellDelegate.swift */; };
 		91E335611CB7603B00EB5E12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335601CB7603B00EB5E12 /* AppDelegate.swift */; };
 		91E335661CB7603B00EB5E12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E335641CB7603B00EB5E12 /* Main.storyboard */; };
 		91E335681CB7603B00EB5E12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91E335671CB7603B00EB5E12 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		91191D9C1CB8AA80005F1DD4 /* ArticleDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailsTableViewController.swift; sourceTree = "<group>"; };
 		91191D9E1CB8ACFD005F1DD4 /* ArticleDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		9155372A1CBA034300145186 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		9155372C1CBA0E6100145186 /* ArticleDetailsTableViewCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailsTableViewCellDelegate.swift; sourceTree = "<group>"; };
 		91E3355D1CB7603B00EB5E12 /* Perutusan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Perutusan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E335601CB7603B00EB5E12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91E335651CB7603B00EB5E12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				91E335A51CB7A8BC00EB5E12 /* CategoryTableViewCell.swift */,
 				91191D9E1CB8ACFD005F1DD4 /* ArticleDetailsTableViewCell.swift */,
 				9155372A1CBA034300145186 /* ActivityIndicatorView.swift */,
+				9155372C1CBA0E6100145186 /* ArticleDetailsTableViewCellDelegate.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				91E3358F1CB7707A00EB5E12 /* ArticleTableViewCell.swift in Sources */,
 				91E335811CB7664C00EB5E12 /* UIAlertControllerExtension.swift in Sources */,
 				91E3357F1CB764F300EB5E12 /* Config.swift in Sources */,
+				9155372D1CBA0E6100145186 /* ArticleDetailsTableViewCellDelegate.swift in Sources */,
 				91E3358D1CB7703400EB5E12 /* ArticlesTableViewController.swift in Sources */,
 				91E3359C1CB798BB00EB5E12 /* TitleViewDelegate.swift in Sources */,
 				91E335831CB7688F00EB5E12 /* Metadata.swift in Sources */,
@@ -399,8 +403,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -447,8 +451,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -476,7 +480,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = Perutusan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -495,8 +500,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = Perutusan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

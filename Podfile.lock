@@ -6,6 +6,7 @@ PODS:
     - Alamofire
     - EVReflection
   - EVReflection (2.24.0)
+  - JTSImageViewController (1.5.1)
   - NVActivityIndicatorView (2.4)
   - R.swift (2.1.0):
     - R.swift.Library (~> 2.0.0)
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - Alamofire
   - AlamofireImage
   - AlamofireJsonToObjects
+  - JTSImageViewController
   - NVActivityIndicatorView
   - R.swift
   - SnapKit
@@ -27,6 +29,7 @@ SPEC CHECKSUMS:
   AlamofireImage: 87408b652e0f5ae5fe364035f15aea8b9b24c77e
   AlamofireJsonToObjects: e5155c1c58493c44d7ebe56bbb1aa65d95e82c68
   EVReflection: 1dbb41847798d88ab625007a6a311f28a5d71d86
+  JTSImageViewController: 1f8ce1cc93dab0d0af8e53badeea7528560cfec9
   NVActivityIndicatorView: 275a3248d752b5eb1163b33aee664d7e3b43c101
   R.swift: efff131531b5cf142e28fd94957806ff71ccbcf2
   R.swift.Library: 9f4b2d12040daa1ffe336d8f7e1574f73721fd01

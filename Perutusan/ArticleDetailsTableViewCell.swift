@@ -12,11 +12,15 @@ import AlamofireImage
 
 class ArticleDetailsTableViewCell: UITableViewCell {
     
+    var delegate: ArticleDetailsTableViewCellDelegate!
+    
     override func awakeFromNib() {
         super.awakeFromNib()        
     }
 
-    func configure(article article: Article) {
+    func configure(article article: Article, delegate: ArticleDetailsTableViewCellDelegate) {
+        self.delegate = delegate
+        
         for subview in contentView.subviews {
             subview.removeFromSuperview()
         }
@@ -75,14 +79,18 @@ class ArticleDetailsTableViewCell: UITableViewCell {
             
             if let photoURL = article.photoURL {
                 let photoImageView = UIImageView()
+                photoImageView.userInteractionEnabled = true
                 photoImageView.af_setImageWithURL(photoURL)
                 photoImageView.contentMode = .ScaleAspectFill
                 photoImageView.clipsToBounds = true
-                photoImageView.backgroundColor = UIColor.groupTableViewBackgroundColor()                 
+                photoImageView.backgroundColor = UIColor.groupTableViewBackgroundColor()
+                
+                let recognizer = UITapGestureRecognizer(target: self, action: #selector(photoImageViewTapped(_:)))
+                photoImageView.addGestureRecognizer(recognizer)
+                
                 contentView.addSubview(photoImageView)
                 
                 photoImageView.snp_makeConstraints(closure: { (make) in
-                    //make.height.equalTo(44)
                     make.top.equalTo(topGuideView.snp_bottom).offset(15)
                     make.left.equalTo(contentView)
                     make.right.equalTo(contentView)
@@ -161,6 +169,10 @@ class ArticleDetailsTableViewCell: UITableViewCell {
                 make.bottom.equalTo(contentView)
             }
         }
+    }
+    
+    func photoImageViewTapped(sender: UITapGestureRecognizer) {
+        delegate.articleDetailsTableViewCell(self, didTapPhotoImageView: sender.view as! UIImageView)
     }
 
 }

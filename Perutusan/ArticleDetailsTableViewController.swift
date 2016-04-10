@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import JTSImageViewController
 
-class ArticleDetailsTableViewController: UITableViewController {
+class ArticleDetailsTableViewController: UITableViewController, ArticleDetailsTableViewCellDelegate {
     
     var article: Article!
     var activityIndicatorView: ActivityIndicatorView!
@@ -39,9 +40,23 @@ class ArticleDetailsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(R.reuseIdentifier.articleDetails, forIndexPath: indexPath)!
-        cell.configure(article: article)
+        cell.configure(article: article, delegate: self)
 
         return cell
+    }
+    
+    
+    
+    // MARK: - Article details delegate
+    
+    func articleDetailsTableViewCell(cell: ArticleDetailsTableViewCell, didTapPhotoImageView photoImageView: UIImageView) {
+        let imageInfo = JTSImageInfo()
+        imageInfo.image = photoImageView.image
+        imageInfo.referenceRect = photoImageView.frame
+        imageInfo.referenceView = photoImageView.superview
+        
+        let imageVC = JTSImageViewController(imageInfo: imageInfo, mode: .Image, backgroundStyle: .Blurred)
+        imageVC.showFromViewController(self, transition: .FromOriginalPosition)
     }
     
     
