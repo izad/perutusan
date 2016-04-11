@@ -12,6 +12,8 @@
 		91191D9F1CB8ACFD005F1DD4 /* ArticleDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91191D9E1CB8ACFD005F1DD4 /* ArticleDetailsTableViewCell.swift */; };
 		9155372B1CBA034300145186 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9155372A1CBA034300145186 /* ActivityIndicatorView.swift */; };
 		9155372D1CBA0E6100145186 /* ArticleDetailsTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9155372C1CBA0E6100145186 /* ArticleDetailsTableViewCellDelegate.swift */; };
+		91C14A291CBB65530094AC66 /* PerutusanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C14A281CBB65530094AC66 /* PerutusanUITests.swift */; };
+		91C14A311CBB65810094AC66 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C14A301CBB65810094AC66 /* SnapshotHelper.swift */; };
 		91E335611CB7603B00EB5E12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335601CB7603B00EB5E12 /* AppDelegate.swift */; };
 		91E335661CB7603B00EB5E12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E335641CB7603B00EB5E12 /* Main.storyboard */; };
 		91E335681CB7603B00EB5E12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91E335671CB7603B00EB5E12 /* Assets.xcassets */; };
@@ -37,6 +39,16 @@
 		91E6C4E21CB8C8BC001E05A5 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E6C4E11CB8C8BC001E05A5 /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		91C14A2B1CBB65530094AC66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91E335551CB7603B00EB5E12 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91E3355C1CB7603B00EB5E12;
+			remoteInfo = Perutusan;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		48AD0B7726219F1672DAC7CC /* Pods-Perutusan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perutusan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Perutusan/Pods-Perutusan.debug.xcconfig"; sourceTree = "<group>"; };
 		84621748DCB62BF5CDC376FC /* Pods-Perutusan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perutusan.release.xcconfig"; path = "Pods/Target Support Files/Pods-Perutusan/Pods-Perutusan.release.xcconfig"; sourceTree = "<group>"; };
@@ -44,6 +56,10 @@
 		91191D9E1CB8ACFD005F1DD4 /* ArticleDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		9155372A1CBA034300145186 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		9155372C1CBA0E6100145186 /* ArticleDetailsTableViewCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailsTableViewCellDelegate.swift; sourceTree = "<group>"; };
+		91C14A261CBB65530094AC66 /* PerutusanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerutusanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		91C14A281CBB65530094AC66 /* PerutusanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerutusanUITests.swift; sourceTree = "<group>"; };
+		91C14A2A1CBB65530094AC66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91C14A301CBB65810094AC66 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		91E3355D1CB7603B00EB5E12 /* Perutusan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Perutusan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E335601CB7603B00EB5E12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91E335651CB7603B00EB5E12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +91,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		91C14A231CBB65530094AC66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		91E3355A1CB7603B00EB5E12 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -103,10 +126,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		91C14A271CBB65530094AC66 /* PerutusanUITests */ = {
+			isa = PBXGroup;
+			children = (
+				91C14A301CBB65810094AC66 /* SnapshotHelper.swift */,
+				91C14A281CBB65530094AC66 /* PerutusanUITests.swift */,
+				91C14A2A1CBB65530094AC66 /* Info.plist */,
+			);
+			path = PerutusanUITests;
+			sourceTree = "<group>";
+		};
 		91E335541CB7603B00EB5E12 = {
 			isa = PBXGroup;
 			children = (
 				91E3355F1CB7603B00EB5E12 /* Perutusan */,
+				91C14A271CBB65530094AC66 /* PerutusanUITests */,
 				91E3355E1CB7603B00EB5E12 /* Products */,
 				50DB522E5D0CC4BC8E09FDE7 /* Pods */,
 				09D22D0EE88F88BA05BABEB0 /* Frameworks */,
@@ -117,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				91E3355D1CB7603B00EB5E12 /* Perutusan.app */,
+				91C14A261CBB65530094AC66 /* PerutusanUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,6 +236,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		91C14A251CBB65530094AC66 /* PerutusanUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91C14A2F1CBB65530094AC66 /* Build configuration list for PBXNativeTarget "PerutusanUITests" */;
+			buildPhases = (
+				91C14A221CBB65530094AC66 /* Sources */,
+				91C14A231CBB65530094AC66 /* Frameworks */,
+				91C14A241CBB65530094AC66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91C14A2C1CBB65530094AC66 /* PBXTargetDependency */,
+			);
+			name = PerutusanUITests;
+			productName = PerutusanUITests;
+			productReference = 91C14A261CBB65530094AC66 /* PerutusanUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		91E3355C1CB7603B00EB5E12 /* Perutusan */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91E3356F1CB7603B00EB5E12 /* Build configuration list for PBXNativeTarget "Perutusan" */;
@@ -232,6 +285,10 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Izad Che Muda";
 				TargetAttributes = {
+					91C14A251CBB65530094AC66 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 91E3355C1CB7603B00EB5E12;
+					};
 					91E3355C1CB7603B00EB5E12 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = G6933L7M22;
@@ -252,11 +309,19 @@
 			projectRoot = "";
 			targets = (
 				91E3355C1CB7603B00EB5E12 /* Perutusan */,
+				91C14A251CBB65530094AC66 /* PerutusanUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		91C14A241CBB65530094AC66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		91E3355B1CB7603B00EB5E12 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -333,6 +398,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		91C14A221CBB65530094AC66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C14A291CBB65530094AC66 /* PerutusanUITests.swift in Sources */,
+				91C14A311CBB65810094AC66 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		91E335591CB7603B00EB5E12 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -365,6 +439,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		91C14A2C1CBB65530094AC66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91E3355C1CB7603B00EB5E12 /* Perutusan */;
+			targetProxy = 91C14A2B1CBB65530094AC66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		91E335641CB7603B00EB5E12 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -385,6 +467,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		91C14A2D1CBB65530094AC66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = PerutusanUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tech.izad.PerutusanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "aca7573f-dd25-456f-b668-203333c0c321";
+				TEST_TARGET_NAME = Perutusan;
+			};
+			name = Debug;
+		};
+		91C14A2E1CBB65530094AC66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = PerutusanUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tech.izad.PerutusanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "aca7573f-dd25-456f-b668-203333c0c321";
+				TEST_TARGET_NAME = Perutusan;
+			};
+			name = Release;
+		};
 		91E3356D1CB7603B00EB5E12 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -516,6 +624,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		91C14A2F1CBB65530094AC66 /* Build configuration list for PBXNativeTarget "PerutusanUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91C14A2D1CBB65530094AC66 /* Debug */,
+				91C14A2E1CBB65530094AC66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		91E335581CB7603B00EB5E12 /* Build configuration list for PBXProject "Perutusan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
