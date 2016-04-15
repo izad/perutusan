@@ -102,6 +102,7 @@ class ArticlesTableViewController: UITableViewController, TitleViewDelegate {
     }
     
     func prepareToFetchArticles() {
+        tableView.scrollEnabled = false
         articles.removeAll()
         tableView.reloadData()
         activityIndicatorView.startAnimation()
@@ -121,6 +122,7 @@ class ArticlesTableViewController: UITableViewController, TitleViewDelegate {
                         }
                         
                         self.tableView.reloadData()
+                        self.tableView.scrollEnabled = true
                         self.activityIndicatorView.stopAnimation()
                         self.refreshControl!.endRefreshing()
                      }

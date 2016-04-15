@@ -12,15 +12,11 @@ import AlamofireImage
 
 class ArticleDetailsTableViewCell: UITableViewCell {
     
-    var delegate: ArticleDetailsTableViewCellDelegate!
-    
     override func awakeFromNib() {
         super.awakeFromNib()        
     }
 
-    func configure(article article: Article, delegate: ArticleDetailsTableViewCellDelegate) {
-        self.delegate = delegate
-        
+    func configure(article article: Article) {        
         for subview in contentView.subviews {
             subview.removeFromSuperview()
         }
@@ -83,11 +79,7 @@ class ArticleDetailsTableViewCell: UITableViewCell {
                 photoImageView.af_setImageWithURL(photoURL)
                 photoImageView.contentMode = .ScaleAspectFill
                 photoImageView.clipsToBounds = true
-                photoImageView.backgroundColor = UIColor.groupTableViewBackgroundColor()
-                
-                let recognizer = UITapGestureRecognizer(target: self, action: #selector(photoImageViewTapped(_:)))
-                photoImageView.addGestureRecognizer(recognizer)
-                
+                photoImageView.backgroundColor = UIColor.groupTableViewBackgroundColor()                
                 contentView.addSubview(photoImageView)
                 
                 photoImageView.snp_makeConstraints(closure: { (make) in
@@ -169,10 +161,6 @@ class ArticleDetailsTableViewCell: UITableViewCell {
                 make.bottom.equalTo(contentView)
             }
         }
-    }
-    
-    func photoImageViewTapped(sender: UITapGestureRecognizer) {
-        delegate.articleDetailsTableViewCell(self, didTapPhotoImageView: sender.view as! UIImageView)
     }
 
 }

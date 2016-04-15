@@ -30,7 +30,7 @@ class PerutusanUITests: XCTestCase {
         let cellsCountIsLargerThanZero = NSPredicate(format: "count > 0")
         expectationForPredicate(cellsCountIsLargerThanZero, evaluatedWithObject: cells, handler: nil)
         waitForExpectationsWithTimeout(10, handler: nil)
-        XCTAssert(cells.count > 0)
+        XCTAssert(cells.count > 0)                        
     }
 
     override func tearDown() {
@@ -47,13 +47,13 @@ class PerutusanUITests: XCTestCase {
     }
 
     func testDetails() {
-        app.tables.cells.elementBoundByIndex(2).tap()
+        app.tables.cells.elementBoundByIndex(2).tap()                
         
-        let label = app.tables.staticTexts["Mohamad Yusoff Ghazali (kiri) bertukar dokumen perjanjian dengan Ahmad Kamal Kasani (kanan) dalam Majlis Pelancaran dan Pengundian MyHome Impiana Sky Residensi @ Bukit Jalil di Kuala Lumpur, semalam."]
-        let labelExists = NSPredicate(format: "exists == true")
-        expectationForPredicate(labelExists, evaluatedWithObject: label, handler: nil)
+        let staticTexts = app.tables.staticTexts
+        let staticTextsAreMoreThanTwo = NSPredicate(format: "count > 2")
+        expectationForPredicate(staticTextsAreMoreThanTwo, evaluatedWithObject: staticTexts, handler: nil)
         waitForExpectationsWithTimeout(10, handler: nil)
-        XCTAssert(label.exists)
+        XCTAssert(staticTexts.count > 2)
         
         snapshot("details")
     }

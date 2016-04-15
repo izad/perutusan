@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import JTSImageViewController
 
-class ArticleDetailsTableViewController: UITableViewController, ArticleDetailsTableViewCellDelegate {
+class ArticleDetailsTableViewController: UITableViewController {
     
     var article: Article!
     var activityIndicatorView: ActivityIndicatorView!
@@ -40,25 +39,11 @@ class ArticleDetailsTableViewController: UITableViewController, ArticleDetailsTa
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(R.reuseIdentifier.articleDetails, forIndexPath: indexPath)!
-        cell.configure(article: article, delegate: self)
+        cell.configure(article: article)
 
         return cell
     }
-    
-    
-    
-    // MARK: - Article details delegate
-    
-    func articleDetailsTableViewCell(cell: ArticleDetailsTableViewCell, didTapPhotoImageView photoImageView: UIImageView) {
-        let imageInfo = JTSImageInfo()
-        imageInfo.image = photoImageView.image
-        imageInfo.referenceRect = photoImageView.frame
-        imageInfo.referenceView = photoImageView.superview
         
-        let imageVC = JTSImageViewController(imageInfo: imageInfo, mode: .Image, backgroundStyle: .Blurred)
-        imageVC.showFromViewController(self, transition: .FromOriginalPosition)
-    }
-    
     
     // MARK: - Misc.
     
@@ -82,6 +67,10 @@ class ArticleDetailsTableViewController: UITableViewController, ArticleDetailsTa
                     applicationActivities: nil
                 )
                 
+                if let popover = activityVC.popoverPresentationController {
+                    popover.barButtonItem = sender
+                }
+                
                 self.presentViewController(activityVC, animated: true, completion: nil)
             }
         ))
@@ -91,6 +80,13 @@ class ArticleDetailsTableViewController: UITableViewController, ArticleDetailsTa
             style: .Cancel,
             handler: nil
         ))
+        
+        if let popover = alertController.popoverPresentationController {
+            popover.barButtonItem = sender
+        }
+        
+        
+        //popover.sourceView = view                
         
         presentViewController(alertController, animated: true, completion: nil)
     }

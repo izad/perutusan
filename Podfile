@@ -8,6 +8,5 @@ target 'Perutusan' do
   pod 'AlamofireJsonToObjects'
   pod 'SnapKit'
   pod 'SwiftHEXColors'
-  pod 'NVActivityIndicatorView'
-  pod 'JTSImageViewController'
+  pod 'NVActivityIndicatorView'  
 end

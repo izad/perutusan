@@ -11,7 +11,6 @@
 		91191D9D1CB8AA80005F1DD4 /* ArticleDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91191D9C1CB8AA80005F1DD4 /* ArticleDetailsTableViewController.swift */; };
 		91191D9F1CB8ACFD005F1DD4 /* ArticleDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91191D9E1CB8ACFD005F1DD4 /* ArticleDetailsTableViewCell.swift */; };
 		9155372B1CBA034300145186 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9155372A1CBA034300145186 /* ActivityIndicatorView.swift */; };
-		9155372D1CBA0E6100145186 /* ArticleDetailsTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9155372C1CBA0E6100145186 /* ArticleDetailsTableViewCellDelegate.swift */; };
 		91C14A291CBB65530094AC66 /* PerutusanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C14A281CBB65530094AC66 /* PerutusanUITests.swift */; };
 		91C14A311CBB65810094AC66 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C14A301CBB65810094AC66 /* SnapshotHelper.swift */; };
 		91E335611CB7603B00EB5E12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E335601CB7603B00EB5E12 /* AppDelegate.swift */; };
@@ -55,7 +54,6 @@
 		91191D9C1CB8AA80005F1DD4 /* ArticleDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailsTableViewController.swift; sourceTree = "<group>"; };
 		91191D9E1CB8ACFD005F1DD4 /* ArticleDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		9155372A1CBA034300145186 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
-		9155372C1CBA0E6100145186 /* ArticleDetailsTableViewCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailsTableViewCellDelegate.swift; sourceTree = "<group>"; };
 		91C14A261CBB65530094AC66 /* PerutusanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerutusanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91C14A281CBB65530094AC66 /* PerutusanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerutusanUITests.swift; sourceTree = "<group>"; };
 		91C14A2A1CBB65530094AC66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -206,7 +204,6 @@
 				91E335A51CB7A8BC00EB5E12 /* CategoryTableViewCell.swift */,
 				91191D9E1CB8ACFD005F1DD4 /* ArticleDetailsTableViewCell.swift */,
 				9155372A1CBA034300145186 /* ActivityIndicatorView.swift */,
-				9155372C1CBA0E6100145186 /* ArticleDetailsTableViewCellDelegate.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -423,7 +420,6 @@
 				91E3358F1CB7707A00EB5E12 /* ArticleTableViewCell.swift in Sources */,
 				91E335811CB7664C00EB5E12 /* UIAlertControllerExtension.swift in Sources */,
 				91E3357F1CB764F300EB5E12 /* Config.swift in Sources */,
-				9155372D1CBA0E6100145186 /* ArticleDetailsTableViewCellDelegate.swift in Sources */,
 				91E3358D1CB7703400EB5E12 /* ArticlesTableViewController.swift in Sources */,
 				91E3359C1CB798BB00EB5E12 /* TitleViewDelegate.swift in Sources */,
 				91E335831CB7688F00EB5E12 /* Metadata.swift in Sources */,
@@ -631,6 +627,7 @@
 				91C14A2E1CBB65530094AC66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		91E335581CB7603B00EB5E12 /* Build configuration list for PBXProject "Perutusan" */ = {
 			isa = XCConfigurationList;
